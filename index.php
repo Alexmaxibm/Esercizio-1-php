@@ -134,7 +134,7 @@ echo max($numero1, $numero2, $numero3,);
 ;
 echo "\n";
 
-                                 /*  Operatori Logici AND &&(shift+6) OR NOT */
+                                 /*  Operatori Logici AND ((&&)shift+6)), OR (||),  NOT (!) */
 
  /* 1. Assegna ad una variabile numero un valore e verifica se è compreso tra 50 e 100. */
 
@@ -171,16 +171,16 @@ echo "\n";
  echo "\n";  
  
  /* 3. determina se una persona può guidare un'auto in base all'età e alla presenza di una patente. 
- (attenzione a 0 e 1 valori booleani dove a true (0) e false (1) sono assegnati 0 e 1 come valore.) */
+ (attenzione a 0 e 1 valori booleani dove a true (1) e false (0) sono assegnati 1 e 0 come valore.) */
 
 $eta = 19;
-$patente = 0;
+$patente = 1;
 
-if($eta > 18 && $patente == 0) {
+if($eta > 18 && $patente == 1) {
     echo "Puoi guidare l'auto, in quanto hai la patente e l'età adeguata.\n";
-} elseif($eta < 18 && $patente ==1) {
+} elseif($eta < 18 && $patente == 0) {
     echo "NON Puoi guidare l'auto senza patente, hai meno di $eta\n";
-} elseif($eta < 18 && $patente ==0) {
+} elseif($eta < 18 && $patente == 1) {
     echo "NON Puoi guidare l'auto, in quanto NON hai l'età per conseguire la patente B.\n";
 } else {
     echo "Devi conseguire la patente B per guidare un'auto!\n";
